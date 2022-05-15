@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Oswald',sans-serif;
+    font-size: 1.3rem;
+    background: #ffffff;
+    
+}
+.container{
+    max-width:687.5rem;;
+    margin: auto;
+    overflow:none;
+    padding: 0 2rem;
+}
+.main-header{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+.main-header h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+.main-header h1 span{
+    color: #ffb703;
+}
+img{
+    width: 100%;
+}
+.card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    background: #f1f1f1;
+    margin-bottom: 2rem;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+.card h3{
+    margin-bottom: 2rem;
+}
+.card img{
+    height:max-content;
+   
+}
+.card>div{
+    padding: 2rem;
+}
+.card:nth-child(even) img{
+    order: 2;
+}
+@media(max-width:700px){
+    .card{display: block;}
+}
+p span{
+    color: #ffb703;
+}
+.clients{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    
+}
+.clients img{
+    max-width: 300px;
+    max-height: 200px;
+    padding: 2rem;
+}
+/* Contact Us */
+.Submit{
+  color: #ffb703;
+  padding: 2px;
+
+}
+.Submit:hover{
+    background-color:#f9c74f;
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 5px #f9c74f;
+}
+.Contact-grid{
+    background-color: #f9c74f;
+    color: #ffffff;
+    text-align: center;
+
+}
+.Contact-grid p{
+    font-size: 1.3rem;
+}
+/* Error */
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush');
+.contain{
+    height: 500px;
+    width: 100%;
+    position: absolute;  
+}
+.wall{
+    position: absolute;
+    top:12%;
+    left: 50%;
+    height:25%;
+    transform: translate(-50%,-50%);
+}
+.wall::before{
+    content: '5';
+    position: absolute;
+    font-family: Caveat Brush;
+    font-size: 330px;
+    left:-40%;
+    top:-10%;
+    animation: sl  ease 1s forwards;
+}
+.wall::after{
+    content: '0';
+    position: absolute;
+    font-family: Caveat Brush;
+    font-size: 330px;
+    right:-40%;
+    top:-10%;
+    animation: sl  ease 1s forwards;
+}
+.errortext h1{
+    position: absolute;
+    top:63%;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 2.5vw;
+}
+.errortext h2{
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 2vw;
+}
+a{
+    color: #000000;
+}
+@keyframes sl{
+    0%{ transform: scale(0.8);}
+    50%{ transform: scale(1.5);}
+    100% {transform: scale(1);}
+}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffb703;
+    color: aliceblue;
+}
+.brand-title{
+width: 100px;
+height: 80px;
+margin: 10px;   
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li{
+    list-style: none;
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 1rem;
+    display: block;
+}
+.navbar-links li:hover{
+    background-color: #666;
+    color: #ffb703;
+}
+.toggle-button{
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+@media(max-width:700px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+       
+    }
+    .navbar-links li{
+        text-align: center;
+    }
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active{
+        transition-property: display;
+        transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        display: flex;
+      
+    }
+}

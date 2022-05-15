@@ -1,0 +1,65 @@
+<%-layout('layout/boilerplate') %> 
+<link rel="stylesheet" href="/style.css">
+<header class="main-header">
+    <h1><span>Contact</span>Us</h1>
+</header>
+
+<main class="container" id="Contact-us">
+
+    <section class="card" data-aos="fade-right">
+     <div class="Contact-grid">
+         <h1>Contact-us</h1>
+       <p>Ph-No:7506070810
+    </p>
+    <p>Email ID: services@crafting-crew.com
+    </p>
+    <Address>Crafting Crew HR Solutions,
+        402, Om Samarpan Apartments,
+        Plot No 114 C, Seawoods,
+        Nerul (West), Navi Mumbai,
+        Pin Code: 400706.
+        </Address>
+        <p>Available 24hrs except Government Holiday</p>
+     </div>
+        <div>
+            <h3>Send A Request</h3>
+            <form action="/admin"class="needs-validation" method="post" novalidate>
+            <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="FirstName" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="LastName" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="Email" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                      <label for="Phone-Number">Phone-Number</label>
+                      <input type="tel" class="form-control" id="Phone-number" placeholder="+91-" name="PhoneNumber" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                    </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Message"></textarea>
+                  </div>
+              </div>
+              <button type="submit" class="Submit">Submit</button>
+            </form>
+        </div>
+    </section>
+   
+</main>
